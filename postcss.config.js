@@ -1,13 +1,13 @@
 module.exports = {
-  "parser": 'sugarss',
-  "plugins": {
-    'postcss-easy-import': {
+  "parser": require('sugarss'),
+  "plugins": [
+    require('postcss-easy-import')({
       extensions: '.sss',
-    },
-    'postcss-mixins': {},
-    'precss': {},
-    'postcss-calc': {},
-    'postcss-nested-props': {},
-    'autoprefixer': {},
-  },
+    }),
+    require('precss'),
+    require('postcss-mixins'),
+    require('postcss-calc'),
+    require('postcss-nested-props'),
+    require('autoprefixer'),
+  ],
 }

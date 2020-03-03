@@ -3,7 +3,7 @@
 <div>Test</div>
 
 <style lang="postcss">
-@import "./test"
+@import "./test2"
 
 div
   color: $yellow

@@ -1,0 +1,32 @@
+{
+  "name": "svelte-preprocess-bug",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Tim Hope",
+  "license": "None",
+  "private": false,
+  "scripts": {
+    "postcss": "postcss src/test.sss",
+    "svelte": "rollup -c -w"
+  },
+  "dependencies": {
+    "autoprefixer": "^9.7.4",
+    "postcss": "^7.0.27",
+    "postcss-calc": "^7.0.2",
+    "postcss-easy-import": "^3.0.0",
+    "postcss-for": "^2.1.1",
+    "postcss-load-config": "^2.1.0",
+    "postcss-mixins": "^6.2.3",
+    "postcss-nested-props": "^2.0.0",
+    "precss": "^4.0.0",
+    "sugarss": "^2.0.0",
+    "svelte-preprocess": "^3.4.0",
+    "@rollup/plugin-commonjs": "^11.0.2",
+    "@rollup/plugin-node-resolve": "^7.1.1",
+    "rollup": "^1.31.1",
+    "rollup-plugin-livereload": "^1.0.4",
+    "rollup-plugin-svelte": "^5.1.1",
+    "rollup-plugin-terser": "^5.2.0",
+    "svelte": "^3.19.1"
+  }
+}

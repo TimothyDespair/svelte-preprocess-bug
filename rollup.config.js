@@ -3,6 +3,8 @@ import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import livereload from 'rollup-plugin-livereload';
 import sveltePreprocess from 'svelte-preprocess';
+import postcss from 'rollup-plugin-postcss';
+const postcssConfig = require('./postcss.config');
 import { terser } from 'rollup-plugin-terser';
 
 const production = !process.env.ROLLUP_WATCH;
@@ -16,10 +18,11 @@ export default {
     file: 'public/build/bundle.js',
   },
   plugins: [
+    postcss(postcssConfig),
     svelte({
       dev: !production,
       preprocess: sveltePreprocess({
-        postcss: require('./postcss.config'),
+        postcss: postcssConfig,
       }),
       css: css => { css.write('public/build/bundle.css') },
     }),
